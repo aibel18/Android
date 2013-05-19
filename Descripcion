@@ -1,0 +1,37 @@
+
+Aplicación Burbuja en Android:
+Consiste en imitar el comportamiento de una burbuja;
+	Nos carga el escenario donde se movera nuestras burbujas
+ 
+	Para crear una burbuja hacer click en el escenario e inmediatamente aparecera una burbuja en la posiscion indicada
+ 
+	Seguir haciendo click y aparecerán mas burbujas
+ 
+
+	Como observamos las burbujas una vez colisionan entre ellas inmediatamente cambian su dirección. Esto ocurre también con los bordes de la superficie esto para que no se salgan del escenario
+
+ 
+
+
+Código:
+
+Clase Burbuja:
+
+	Atributos:
+	posX = posición en X
+	posY = posición en Y
+	velX = velocidad con la que se moverá en el eje X
+	velY = velocidad con la que se moverá en el eje Y
+	radio = el radio que tendrá nuestro burbuja
+	Inicialización:
+	Nuestra burbuja inicializa con un velX, velY y radio aleatorio;
+	La posición es establecida al momento de hacer click
+	Colisiones:
+	El método colisiones es el que determina las posibles colisiones que hay entre todas las burbujas que están en el escenario ( todos contra todos).
+	Lo calculamos mediante la formula:
+	Dreal= √(〖(B1x-B2x)〗^2+〖(B1y-B2y)〗^2 ) , distancia real entre dos burbujas
+	D=radioB1+radioB2, distancia de separación mínima entre dos burbujas
+	Si, Dreal < D entonces existe una colisión entre B1 y B2
+Clase Escenario:
+	Esta clase se encarga básicamente de dibujar y actualizar sus posiciones del as burbujas
+
